@@ -76,7 +76,7 @@ const SectionHeader = ({ children }) => (
 )
 
 class DesignTool extends React.Component {
-  constructor  (props) {
+  constructor (props) {
     super()
     this.googleFonts = JSON.stringify(props.typography.options.googleFonts)
     const options = new Typography(props.typography.options).options
@@ -92,7 +92,7 @@ class DesignTool extends React.Component {
     }
   }
 
-  render  () {
+  render () {
     const options = themeRegistry.map((theme, i) => (
       <option key={i} value={i}>{theme.title}</option>
     ))
@@ -248,7 +248,7 @@ class DesignTool extends React.Component {
                 onValueChange={(value) => {
                   const options = this.state.options
                   options.blockMarginBottom = parseFloat(value)
-                  this.setState({ options })
+                  this.setState({ options: options })
                 }}
               />
             </SectionTool>
@@ -291,7 +291,7 @@ class DesignTool extends React.Component {
                 onValueChange={(value) => {
                   const options = this.state.options
                   options.headerGray = value
-                  this.setState({ options })
+                  this.setState({ options: options })
                 }}
               />
             </SectionTool>
@@ -347,7 +347,7 @@ class DesignTool extends React.Component {
                 onValueChange={(value) => {
                   const options = this.state.options
                   options.bodyGray = value
-                  this.setState({ options })
+                  this.setState({ options: options })
                 }}
               />
             </SectionTool>
