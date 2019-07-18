@@ -23,12 +23,12 @@ const ratios = {
 module.exports = function(ratio) {
   let r
 
-  if (ratio == null) {
+  if (ratio === null) {
     r = 2
   }
   if (_.isNumber(ratio)) {
     r = ratio
-  } else if (ratios[ratio] != null) {
+  } else if (ratios[ratio] !== null) {
     r = ratios[ratio]
   } else {
     r = 2
